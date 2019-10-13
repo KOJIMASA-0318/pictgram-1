@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates :password_confirmation, length: {minimum: 8, maximum: 32}
   
   has_secure_password
+  
+  has_many :topics
 end
