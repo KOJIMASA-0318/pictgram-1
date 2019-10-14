@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :userbundles
+  get 'topics/index'
   # get 'topics/new' 20191013に削除
   get 'sessions/new'
   # get 'users/new'
