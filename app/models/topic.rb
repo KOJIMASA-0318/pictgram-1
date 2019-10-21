@@ -7,4 +7,6 @@ class Topic < ApplicationRecord
   
   mount_uploader :image, ImageUploader
   #image:carrierwave用に作ったカラム名,carrierwaveの設定ファイルのクラス名
+  has_many :favorites
+  
 end
