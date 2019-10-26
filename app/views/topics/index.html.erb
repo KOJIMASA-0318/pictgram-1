@@ -17,10 +17,11 @@
                <%= image_tag 'icons/heart-red.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
+            <%=@favorites_count %>
             
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <p class="topic-text">
-              <%= topic.description %>
+              <%= topic.favorite_users.count %>
             </p>
           </div>
         </div>

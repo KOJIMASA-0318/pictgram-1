@@ -21,8 +21,6 @@ class FavoritesController < ApplicationController
     favorite.destroy
     redirect_to topics_path, success: "お気に入りを取り消しました"
   end
-  
-  # def show
-  # end
+
   
 end
