@@ -22,11 +22,13 @@ class SessionsController < ApplicationController
     log_out
     redirect_to root_url, info: "ログアウトしました"
   end
-
+  
+ private
  def email_params
   params.require(:session).permit(:email)
  end
  
+  private
   def password_params
    params.require(:session).permit(:password)
   end 
