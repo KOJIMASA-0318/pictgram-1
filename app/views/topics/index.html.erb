@@ -23,12 +23,6 @@
               <%= topic.favorite_users.count %>
               <!--topicモデルで定義したhas_many:favorite_ussersが対応している。-->
             </p>
-            <form_for @comment, do |f| %>
-              <div class= "form-group">
-                <%= f.label :"comment" %>
-                <%= f.text_area :コメント, class: "form-control" %>
-              </div>
-            <% end %>
           </div>
         </div>
       </div>
