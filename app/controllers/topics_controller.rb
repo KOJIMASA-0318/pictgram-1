@@ -5,7 +5,10 @@ class TopicsController < ApplicationController
   
   def new
     @topic = Topic.new
+    # @comments = @topic.comments
+    # @comment = Comment.new
   end
+  # 8,9行名は正しいのか "https://qiita.com/nojinoji/items/2034764897c6e91ef982" を参照20191103、、、
 
   def create
     @topic = current_user.topics.new(topic_params)
