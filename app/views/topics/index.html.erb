@@ -17,21 +17,19 @@
                <%= image_tag 'icons/heart-red.png', class: 'topic-index-icon' %>
               <% end %>
             <% end %>
-           <%= link_to "new_comment_path" do %>
+           <%= link_to new_comment_path(topic_id: topic.id), method: :get do %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+           <% end %>
             <p class="topic-text">
               <%= topic.favorite_users.count %>
               <!--topicモデルで定義したhas_many:favorite_usersが対応している。-->
             </p>
-           <% end %>
-            
              <div>
               <h3>コメント</h3> 
-              <% @topic_comments.each do |c| %>
-              <%= c.comment %>
+              <% topic.comments.each do |topic| %>
+              <%= topic.comments.comment %>
               <% end %>
             </div>
-            
           </div>
       </div>
     <% end %>

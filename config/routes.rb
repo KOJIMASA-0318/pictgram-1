@@ -19,6 +19,5 @@ Rails.application.routes.draw do
   delete '/favorite/delete', to: 'favorites#destroy'
   
   resources :comments
-  get "/comments/new"
-  
+  get "/comments/new" , to: "comments#new"
 end
